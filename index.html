@@ -14,10 +14,12 @@
 <br></br> 
 <h2>TeleOp</h2>
 <br>
+<button onclick = "fun()" > Click Me </button>
 <p id='message'></p>
 
 <script>
+  function fun(){
   var name = prompt("What's your name?");
-  var lengthOfName = name.length
-  document.getElementById('message').innerHTML = lengthOfName;
+  document.getElementById('message').innerHTML = name;
+  }
 </script>

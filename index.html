@@ -10,15 +10,16 @@
 
 <h2>Autonomous</h2>
 <br>
-<button onclick = "fun()" >        Do you have a working autonomous</button> <h3 id='message'></h3>
+<button onclick = "fun("Do you have a working autonomous")" >        Do you have a working autonomous</button> <h3 id='message'></h3>
 <br></br> 
 <h2>TeleOp</h2>
+  
 <br>
 
 
 <script>
-  function fun(){
-  var name = prompt("What's your name?");
+  function fun(msg){
+  var name = prompt(msg);
   document.getElementById('message').innerHTML = name;
   }
 </script>

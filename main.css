@@ -3,4 +3,13 @@ h1 {text-align: center;
 h2 {font-weight: bold;
     color: gold;}
 h3 {color: gold;}
+body {
+    color:#fff;
+}
 
+@media (prefers-color-scheme: dark) {
+    body {
+        color:#fff;
+        background:#333333
+    }
+}

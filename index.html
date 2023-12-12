@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="main.css">
 <script src="path/to/html2pdf.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 
@@ -26,25 +27,27 @@ Do you have a drone: <input type="text" id="4" name="Name">
 <br>
 <br>
 <button id="exportButton">Export to PDF</button>
+<form method="post">
+        <input type="button" value="Send Email"
+               onclick="sendEmail()" />
+    </form>
 </body>
   </div>
 
 <script>
-  function fun(msg){
-  var name = prompt(msg);
-  document.getElementById('message').innerHTML = name;
-  }
-  function screenshot(){
-    
-  }
-  function sendMsg(email){
-    
-  }
-  function exportHTMLtoPDF() {
-         let htmlElement = document.getElementById('content');
-
-         html2pdf().from(htmlElement).save('exported_file.pdf');
-      }
-
-      document.getElementById('exportButton').addEventListener('click', exportHTMLtoPDF);
-</script>
+    <script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "11792ftc@gmail.com",
+                Password: "Botsburgh1",
+                To: 'rossben07@gmail.com',
+                From: "11792ftc@gmail.com",
+                Subject: "Sending Email using javascript",
+                Body: "Well that was easy!!",
+            })
+                .then(function (message) {
+                    alert("mail sent successfully")
+                });
+        }
+  </script>
